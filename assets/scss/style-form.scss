@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+.font-manrope {
+  font-family: 'Manrope';
+}
+.underlined-title {
+  @apply relative;
+}
+.underlined-title::after {
+  content: '';
+  @apply absolute h-[4px] w-[40px] top-[56px] right-[10px] bg-primary;
+}
+
+.underlined-title-register {
+  @apply relative;
+}
+.underlined-title-register::after {
+  content: '';
+  @apply absolute h-[4px] w-[40px] top-[56px] right-[90px] bg-primary;
+}
+
+.underlined-header {
+  @apply relative;
+}
+.underlined-header::after {
+  content: '';
+  @apply absolute h-[4px] w-[30px] top-[44px] right-[62px] bg-primary #{!important};
+}
+
+.notification-custom {
+  @apply pc:w-[1024px] w-[342px] h-[71px] bg-secondary #{!important};
+  &.notification-warning-required{
+    @apply h-[100px] #{!important};
+  }
+}
+
+.notification-custom .el-icon {
+  display: none !important;
+}
+
+.notification-create-custom {
+  @apply pc:w-[1024px] w-[342px] h-[71px] bg-secondary justify-center rounded-xl #{!important};
+}
+
+.el-message .el-message-icon--info {
+  display: none !important;
+}
+
+.color-header {
+  .el-form-item__label {
+    @apply relative font-bold text-sm  text-black #{!important};
+  }
+}
+
+.employer-from .is-required .el-form-item__label::after,
+.seeker-from .is-required .el-form-item__label::after {
+  content: '*必須';
+  @apply absolute text-danger text-xs font-normal mt-[2px] ml-[5px] #{!important};
+}
+
+.form-history .is-required .el-form-item__label::after,
+.seeker-from .is-required .el-form-item__label::after {
+  content: '*応募時必須';
+  @apply absolute text-danger text-xs font-normal mt-[2px] ml-[5px] #{!important};
+}
+
+.employer-from .is-required .el-form-item__label::before,
+.seeker-from .is-required .el-form-item__label::before {
+  content: '' !important;
+  @apply absolute;
+}
+
+.form-history .is-required .el-form-item__label::before,
+.seeker-from .is-required .el-form-item__label::before {
+  content: '' !important;
+  @apply absolute;
+}
+
+.custom-link {
+  display: inline-block;
+  @apply relative;
+}
+
+.custom-link::after {
+  content: '';
+  @apply absolute w-[152px] h-[1px] bg-primary top-[18px];
+}
+.el-button {
+  @apply tracking-wider;
+}
+// style el-drawer
+.el-dropdown-menu {
+  @apply rounded-[10px] #{!important};
+}
+
+.el-drawer__body {
+  @apply bg-white p-0 #{!important};
+}
+
+.ltr {
+  @apply bg-primary rounded-r-xl #{!important};
+}
+
+.rtl {
+  @apply bg-primary rounded-l-xl #{!important};
+}
+
+.el-dropdown {
+  @apply text-black #{!important};
+}
+
+.el-dropdown-menu__item {
+  --el-text-color-regular: #333333 !important;
+}
+.el-input-group__prepend {
+  @apply pl-6 pr-0 border-0 bg-white #{!important};
+}
+.el-input--large .el-input__inner {
+  @apply h-[54px] #{!important};
+}
+.input-select {
+  .el-input__suffix {
+    display: none !important;
+  }
+}
+.checkbox-search-emloyer {
+  label {
+    @apply m-0;
+  }
+  .el-radio__label {
+    @apply pl-4 text-black #{!important};
+  }
+}
+.header {
+  @apply flex justify-between items-center mobile:px-6 px-16  sticky top-0 z-[999] bg-white border-b-[1px] border-gray-third pc:h-[70px] h-[64px];
+}
+
+.underlined-employer {
+  position: relative;
+  @apply relative;
+}
+
+.underlined-employer::after {
+  content: '';
+  @apply absolute h-[4px] w-[30px] top-[44px] right-[58px] bg-primary #{!important};
+}
+
+.underlined-privacy-policy {
+  position: relative;
+  @apply relative;
+}
+
+.underlined-privacy-policy::after {
+  content: '';
+  @apply absolute h-[4px] w-[40px] top-[56px] right-[490px] mobile:right-[150px] bg-primary #{!important};
+}
+
+.underlined-inquiry {
+  position: relative;
+  @apply relative;
+}
+
+.underlined-inquiry::after {
+  content: '';
+  @apply absolute h-[4px] w-[40px] top-[66px] right-[490px] mobile:right-[150px] bg-primary #{!important};
+}
+
+.custom-link-components-top {
+  @apply relative;
+}
+
+.custom-link-components-top::after {
+  content: '';
+  @apply absolute w-[65px] h-[1px] bg-primary top-[18px] font-bold;
+}
+
+.custom-link-components {
+  @apply relative mobile:hidden #{!important};
+}
+
+.custom-link-components::after {
+  content: '';
+  @apply absolute w-[65px] h-[1px] bg-primary top-[18px] font-bold;
+}
+
+.custom-link-cancel {
+  @apply relative mobile:mb-[16px];
+}
+
+.custom-link-cancel::after {
+  content: '';
+  @apply absolute w-[70px] h-[1px] bg-primary top-[18px] font-bold;
+}
+
+.government-office-information {
+  @apply relative;
+}
+.government-office-information::before {
+  content: '';
+  @apply absolute h-[31px] w-[4px] left-[-20px] mt-[-3px] bg-primary #{!important};
+}
+
+.special-feature {
+  @apply relative;
+}
+.special-feature::before {
+  content: '';
+  @apply absolute h-[31px] w-[4px] left-[-14px] mt-[-3px] bg-primary #{!important};
+}
+
+.underlined-before {
+  @apply relative;
+}
+.underlined-before::before {
+  content: '';
+  @apply absolute h-[43px] w-[4px] left-[-16px] mt-[-4px] bg-primary #{!important};
+}
+
+.withdraw-form-confirm {
+  label.el-checkbox.is-checked {
+    pointer-events: none !important;
+  }
+}
+.el-button {
+  border-radius: 8px !important;
+  --el-button-font-weight: 700 !important;
+}
+
+.entry-form-settings,
+.user-message-list,
+.sidebar-message-list {
+  .el-radio__input.is-checked .el-radio__inner {
+    @apply bg-white;
+  }
+  .el-radio__inner::after {
+    @apply bg-primary h-[9px] w-[9px] #{!important};
+  }
+  .el-radio__input.is-checked + .el-radio__label {
+    @apply text-black #{!important};
+  }
+}
+.entry-form-upload {
+  .el-upload-list.el-upload-list--text {
+    @apply hidden #{!important};
+  }
+}
+
+.form-checkbox-group {
+  @apply mb-4;
+  .el-checkbox__inner {
+    @apply border border-solid border-black;
+    &::after {
+      @apply left-[5px] top-[3px];
+    }
+  }
+}
+.table-notice-list {
+  .el-table_1_column_1 {
+    @apply text-primary;
+  }
+  .is-leaf {
+    @apply text-black;
+  }
+  .el-table__column-filter-trigger {
+    @apply pl-[6px];
+  }
+  .el-icon {
+    @apply text-[16px];
+  }
+}
+.pagination-admin {
+  .el-input-number__decrease,
+  .el-input-number__increase {
+    @apply hidden;
+  }
+  .el-input-number .el-input__wrapper {
+    @apply p-0 #{!important};
+  }
+}
+.admin-create-notice {
+  .upload-blog-editor {
+    @apply hidden;
+  }
+  .el-input__prefix {
+    @apply hidden #{!important};
+  }
+  .el-date-editor.el-date-editor--date {
+    @apply w-[232px] #{!important};
+    .el-input__wrapper {
+      @apply w-full;
+    }
+  }
+}
+.el-card {
+  border: unset !important;
+  @apply text-black #{!important};
+}
+.form-modal-message {
+  @apply pc:w-[1024px] mobile:w-full rounded-xl;
+}
+.form-modal-recruitment {
+  @apply pc:w-[760px] mobile:w-full rounded-xl;
+}
+
+.form-modal-message .el-dialog__body {
+  @apply p-0;
+}
+.el-dialog.form-modal-message {
+  @apply mobile:w-full pc:w-[1024px] rounded-t-xl;
+}
+.form-modal-message .el-dialog__header {
+  @apply hidden;
+}
+.input-select {
+  .el-input__suffix {
+    display: inline-flex !important;
+  }
+}
+.el-icon.el-select__caret.el-select__icon {
+  color: #000000 !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+}
+
+.el-icon.el-select-v2__caret.el-input__icon {
+  color: #000000 !important;
+  font-size: 16px !important;
+  font-weight: 900 !important;
+}
+
+.el-overlay-dialog {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.el-overlay-dialog::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.notification-error-custom {
+  @apply pc:w-[1024px] w-[342px] h-[71px] bg-danger-second #{!important};
+}
+.notification-error-custom .el-icon {
+  display: none !important;
+}
+.el-table .cell{
+  white-space: break-spaces !important;
+}
+
+.form-item-edit {
+  .el-form-item__label::after {
+    content: '*必須';
+    margin-left: 8px;
+    color: red;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+.form-item-conditions {
+  .el-form-item__label::after {
+    content: '任意';
+    margin-left: 8px;
+    color: gray;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+
+.template-text-editor{
+  @apply text-primary bg-secondary;
+}
+.disable-css-template-text-editor{
+  .template-text-editor{
+    @apply text-black bg-white #{!important};
+  }
+}
+
+.disable-css-template-text-editor-text-gray{
+  .template-text-editor{
+    @apply text-gray bg-white #{!important};
+  }
+}
+
+.content-message {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  height: 18px;
+  display: -webkit-box;
+}
+
+.template-title-message-editor {
+  .ProseMirror {
+    @apply py-0 pt-3 h-[56px]  #{!important};
+  }
+}
+
+.inputNameAttachment {
+  .el-input__wrapper {
+    @apply pr-[56px];
+  }
+}
+.disableInputNameAttachment{
+  .el-input__wrapper {
+    @apply pointer-events-none ;
+    .el-input__inner{
+      @apply bg-[#f5f7fa];
+    }
+  }
+}
+.label-custom-break-line {
+  white-space: break-spaces;
+  line-break: anywhere;
+}
+.svg-custom:hover svg {
+  @apply fill-primary;
+}
+
+.free-description-editor {
+  .ProseMirror {
+    @apply h-[160px]  #{!important};
+    a {
+      @apply text-primary underline;
+    }
+  }
+  a {
+    @apply text-primary underline;
+  }
+}
+
+.form-item-label-custom-letter-space {
+  .el-form-item__label {
+    @apply tracking-[0.05px] p-0 #{!important};
+  }
+}
+
+.svg-message-custom-disabled svg {
+  fill: #C8CBCE;
+}
+
+.svg-message-custom svg {
+  fill: #333333
+}
+
+.svg-message-custom:hover svg {
+  fill: #0871E1;
+}

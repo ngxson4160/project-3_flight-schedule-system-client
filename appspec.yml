@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/public-connect-client
+permissions:
+  - object: /var/www/public-connect-client
+    owner: ubuntu
+    group: ubuntu
+    mode: 777
+hooks:
+  BeforeInstall:
+    - location: scripts/before_install.sh
+      timeout: 3600
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 3600
+      runas: ubuntu

@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18 # Choose the desired Node.js version
+    commands:
+      - npm install --legacy-peer-deps
+
+  build:
+    commands:
+      - npm run build
+      - zip -r public-connect-client.zip ./.output ./scripts appspec.yml appspec2.yml appspec_prod.yml
+      - aws s3 cp public-connect-client.zip s3://prod-public-connect/public-connect-client.zip
+artifacts:
+  files:
+    - 'public-connect-client.zip'

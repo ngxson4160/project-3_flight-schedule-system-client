@@ -1,0 +1,351 @@
+html, h1, h2, h3, h4, h5, h6 {
+  scroll-padding-top: calc(104px + 68px);
+}
+@media (max-width: 480px) {
+  html, h1, h2, h3, h4, h5, h6 {
+    scroll-padding-top: calc(65px + 68px);
+  }
+}
+
+.circle-logo {
+  @apply border rounded-full overflow-hidden border-color-border flex-shrink-0 flex justify-center items-center;
+}
+
+.tag {
+  @apply text-primary border border-primary px-2 py-1 rounded text-xs;
+  &.active {
+    @apply text-black #{!important};
+    @apply bg-color-tag border-0;
+  }
+}
+
+.tag-job-category {
+  @apply border px-2 py-1 rounded font-bold text-xs border-color-border;
+  &.active {
+    @apply text-black #{!important};
+    @apply bg-color-tag border-0;
+  }
+}
+
+.checkbox-blog {
+  @apply text-base max-w-[735px] inline-block overflow-hidden whitespace-nowrap text-ellipsis mobile:max-w-[317px];
+}
+.tag-checkbox {
+  @apply text-sm font-normal max-w-[680px] truncate text-end mobile:max-w-[262px];
+}
+
+.text-overflow {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  @apply overflow-hidden overflow-ellipsis;
+}
+.line-clamp-1 {
+  -webkit-line-clamp: 1 !important;
+}
+.line-clamp-2 {
+  -webkit-line-clamp: 2 !important;
+}
+.text-title-blog {
+  @media (max-width: 480px) {
+     -webkit-line-clamp: 2 !important;
+  }
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3 !important;
+}
+
+.text-overflow-2-line {
+  @media (max-width: 480px) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+.el-checkbox {
+  @apply h-auto #{!important};
+}
+
+.el-form-item {
+  &.is-error {
+    .el-radio {
+      --el-radio-text-color: var(--color-danger) !important;
+    }
+    .el-checkbox {
+      --el-checkbox-text-color: var(--color-danger) !important;
+    }
+    .multi-tag-wrapper {
+      @apply border-danger #{!important};
+    }
+    .el-select-v2__wrapper.is-focused {
+      border-color: transparent !important;
+    }
+  }
+}
+.el-form-item__label {
+  @apply tracking-wider font-bold text-black #{!important};
+}
+
+.el-tag {
+  @apply text-black font-bold text-base leading-[23px] border-0 #{!important};
+  &.is-closable {
+    @apply pr-4 #{!important};
+  }
+  &__close {
+    @apply ml-2 w-6 h-6 rounded-sm text-white bg-black-800 #{!important};
+  }
+}
+
+.form-item-border-bottom {
+  @apply border-b border-solid border-color-border min-h-[70px] items-center;
+}
+
+.custom-nav-links {
+  li {
+    .item {
+      @apply relative;
+      &::before {
+        content: '';
+        @apply absolute bottom-0 left-[50%] -translate-x-[50%] w-[35%]
+            h-1 bg-transparent;
+      }
+    }
+  }
+  .router-link-active,
+  .is-active {
+    @apply text-black #{!important};
+    &::before {
+      @apply bg-primary #{!important};
+    }
+  }
+}
+
+.cover {
+  @apply w-[1056px] mx-auto px-4;
+  @media screen and (max-width: 1024px) {
+    @apply w-full px-6;
+  }
+}
+
+.el-container {
+  @media screen and (min-width: 768px) {
+    @apply w-[720px] mx-auto px-[15px];
+  }
+  @media screen and (min-width: 992px) {
+    @apply w-[960px] mx-auto px-[15px];
+  }
+  @media screen and (min-width: 1200px) {
+    @apply w-[1140px] mx-auto px-[15px];
+  }
+  @media screen and (max-width: 768px) {
+    @apply w-full px-6;
+  }
+
+  .el-row {
+    @media screen and (max-width: 768px) {
+      @apply w-full px-0 mx-0 #{!important};
+    }
+  }
+
+  div[class^='el-col'] {
+    @media screen and (max-width: 768px) {
+      @apply w-full px-0 #{!important};
+    }
+  }
+}
+
+.page-favorite-job {
+  .job-card {
+    .card-wrapper {
+      @apply p-4 #{!important};
+    }
+    .card-job-header {
+      @apply flex-col gap-2 #{!important};
+    }
+    .circle-logo {
+      @apply h-20 w-20 #{!important};
+    }
+    .descriptions,
+    .job-time,
+    .tag.active {
+      @apply pc:hidden #{!important};
+    }
+  }
+}
+
+.infinite-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 0px !important;
+  padding-right: 16px !important;
+  height: 80vh;
+
+  & > li {
+    list-style: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    @apply h-[468px]  #{!important};
+  }
+}
+
+.custom-scroll-bar {
+  &::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply rounded;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-gray-third rounded;
+  }
+}
+
+.el-button {
+  @apply text-base #{!important};
+}
+
+.el-select-dropdown__option-item,
+.el-select-v2__placeholder {
+  @apply text-base #{!important};
+}
+
+.el-select-dropdown{
+  @apply p-4;
+  .el-select-dropdown__list{
+    @apply py-0 #{!important};
+  }
+  .el-select-dropdown__item{
+    @apply px-0 #{!important};
+  }
+}
+
+.table-tag {
+  @apply border p-1  text-center text-xs w-fit rounded;
+
+  &.primary {
+    @apply border-primary  text-primary;
+  }
+
+  &.gray {
+    @apply border-gray  text-gray;
+  }
+
+  &.danger {
+    @apply border-danger  text-danger;
+  }
+}
+
+.truncate-text-1-line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.truncate-text-2-line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.min-height-500 {
+  min-height: 500px;
+}
+
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+
+.new-menu-popover {
+  @apply h-full w-10 rounded-full flex justify-end items-center hover:cursor-pointer;
+}
+
+.empty-media {
+  background: #d9d9d9;
+  @apply h-full;
+}
+
+.radio-type-blog {
+  @apply flex flex-col items-start items-start #{!important};
+  .el-radio {
+    @apply h-full #{!important};
+  }
+}
+
+.filter-status-blog {
+  .el-button.is-active {
+    @apply text-white border-0 bg-primary #{!important};
+  }
+}
+
+.tag-type-news {
+  @apply border-primary text-primary text-center border rounded py-1 px-2 my-1  whitespace-nowrap text-xs;
+}
+
+.tag-session-schedule {
+  @apply border-color-border text-black text-center border rounded py-1 px-2 my-1  whitespace-nowrap mr-2 text-xs;
+}
+
+.radio-primary {
+  .el-radio__input.is-checked .el-radio__inner {
+    @apply bg-white w-5 h-5;
+  }
+  .el-radio__input.is-checked .el-radio__inner::after {
+    @apply bg-primary w-[10px] h-[10px] translate-x-[calc(-50%)] translate-y-[calc(-50%)] transition-all;
+  }
+}
+
+.select-time-job {
+  .el-input {
+    & {
+      input::placeholder {
+        color: black !important;
+        -webkit-text-fill-color: black !important
+      }
+    }
+  }
+  
+  .el-input {
+    &.is-disabled {
+      input::placeholder {
+        color: #DADCDE !important;
+        -webkit-text-fill-color: #DADCDE !important
+      }
+    }
+  }
+}
+
+.show-icon-video {
+  background-color: rgba(51, 51, 51, 0.80) !important;
+}
+
+.job-demo-image {
+  .el-carousel__container {
+    @apply h-[228px] #{!important};
+    @media screen and (min-width: 480px) {
+      @apply h-[453px] #{!important};
+    }
+  }
+  .el-carousel__arrow {
+    @apply block #{!important};
+    .el-carousel__arrow {
+      @apply bg-black-800 #{!important};
+    }
+  }
+  .el-carousel__indicators{
+    @apply hidden #{!important}
+  }
+}

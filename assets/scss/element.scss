@@ -1,0 +1,86 @@
+@use './variables.scss';
+
+$--color: (
+  'primary': (
+    'base': variables.$color-primary,
+  ),
+  'danger': (
+    'base': variables.$color-danger,
+  ),
+);
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: $--color,
+  $common-component-size: (
+    'default': variables.$input-size-default,
+  ),
+  $card: (
+    'border-radius': variables.$card-radius,
+    'padding': variables.$card-spacing,
+    'border-color': variables.$card-border-color,
+  ),
+  $input: (
+    'border-radius': variables.$input-radius,
+    'border-width': 1px,
+    'border-style': solid,
+    'border-color': variables.$input-border-color,
+    'text-color': variables.$input-text,
+  ),
+  $box-shadow: (
+    'light': (
+      variables.$box-shadow-light,
+    ),
+  ),
+  $checkbox: (
+    'font-size': 16px,
+    'font-weight': 400,
+    'input-height': 17px,
+    'input-width': 17px,
+    'input-border': 2px solid,
+    'checked-text-color': inherit,
+    'input-border-color-hover': inherit,
+    'text-color': variables.$color-black,
+  ),
+  $radio: (
+    'font-size': 16px,
+    'input-height': 19px,
+    'input-width': 19px,
+    'font-weight': 400,
+    'input-border-color': variables.$color-black,
+    'input-border': 1px solid,
+    'text-color': variables.$color-black,
+  ),
+  $select-group: (
+    'height': 56px,
+  ),
+  $tag-padding: (
+    'large': 12px,
+    'default': 16px,
+    'small': 8px,
+  ),
+  $tag: (
+    'font-size': 16px,
+    'border-radius': 5px,
+    'border-radius-rounded': 2px,
+  ),
+  $tag-height: (
+    'large': 32px,
+    'default': 40px,
+    'small': 20px,
+  ),
+  $tag-icon-size: (
+    'large': 16px,
+    'default': 16px,
+    'small': 14px,
+  ),
+  $breakpoints: (
+    'xs': '(max-width: #{variables.$sm})',
+    'sm': '(min-width: #{variables.$sm})',
+    'md': '(min-width: #{variables.$md})',
+    'lg': '(min-width: #{variables.$lg})',
+    'xl': '(min-width: #{variables.$xl})',
+  ),
+  $collapse: (
+    'header-height': auto,
+  )
+);

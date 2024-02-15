@@ -1,0 +1,41 @@
+//base
+/* 
+colors
+*/
+:root {
+  --color-danger: #fe4b28;
+  --letter-spacing: 0.05em;
+  --text-color: #333333;
+  --color-gray: #a3a8ad;
+  --el-text-color-regular: #333333;
+  --color-primary: #0871e1;
+  --el-color-primary-light-3: #0871e1;
+}
+$color-primary: #0871e1;
+$color-danger: #fe4b28;
+$color-black: #333333;
+
+/* 
+card
+*/
+$card-spacing: 0;
+$card-radius: 0.75rem;
+$card-border-color: transparent;
+
+/* 
+input
+*/
+$input-border-color: #c9cccf99;
+$input-radius: 0.25rem;
+$input-size-default: 3.5rem;
+$input-text: #333333;
+
+/* 
+box shadow
+*/
+$box-shadow-light: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+$sm: 768px !default;
+$md: 992px !default;
+$lg: 1200px !default;
+$xl: 1920px !default;
